@@ -1,17 +1,18 @@
 import React from 'react';
 
+import { Header, Footer } from './../shared';
+
 import styles from './style.module.scss';
+import MovieSearch from './../pages/MovieSearch';
 
 function App() {
   return (
     <>
-      <header className={styles.header}>
-        <span className={styles.title}>Movie app</span>
-      </header>
-      <main className={styles.container}> Something </main>
-      <footer className={styles.footer}>
-        <span className={styles.copyright}>Copyright elkin (c) 2019</span>
-      </footer>
+      <Header />
+      <main className={styles.container}>
+          <MovieSearch/>
+      </main>
+      <Footer />
     </>
   );
 }
