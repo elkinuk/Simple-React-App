@@ -1,15 +1,20 @@
 import React from 'react';
 
 import { SubHeader } from './../../shared';
+import MoviesList from './../../components/MoviesList';
+
+import { getMovies } from './utils.js';
 
 function MovieSearch() {
+  const allMovies = getMovies();
+
     return (
       <>
         <div>Search form</div>
         <SubHeader>
-          <span>A lot of films were found</span>
+          <span>{allMovies.length + ' films are found'}</span>
         </SubHeader>
-        <div>Movies</div>
+        <MoviesList movies={allMovies} />
       </>
     );
 }
