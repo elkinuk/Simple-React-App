@@ -8,8 +8,26 @@ import { getMovies } from './utils.js';
 
 class MovieSearch extends Component {
   state = {
+    movies: [],
     searchValue: '',
   };
+
+  _setMovies() {
+    const { searchValue } = this.state;
+    const movies = getMovies(searchValue);
+
+    this.setState({ movies });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.searchValue !== prevState.searchValue) {
+      this._setMovies();
+    }
+  }
+
+  componentDidMount() {
+    this._setMovies();
+  }
 
   handleSubmit = (e, searchValue) => {
     e.preventDefault();
@@ -18,16 +36,15 @@ class MovieSearch extends Component {
   };
 
   render() {
-    const { searchValue } = this.state;
-    const allMovies = getMovies(searchValue);
+    const { movies } = this.state;
 
     return (
       <>
         <MovieSearchForm handleSubmit={this.handleSubmit}/>
         <SubHeader>
-          <span>{allMovies.length + ' films are found'}</span>
+          <span>{movies.length + ' films are found'}</span>
         </SubHeader>
-        <MoviesList movies={allMovies} />
+        <MoviesList movies={movies} />
       </>
     );
   }
