@@ -1,6 +1,13 @@
 import mockedData from './../../core/data.json';
 
-export function getMovies() {
+export function getMovies(searchValue) {
+  let { movies } = mockedData;
 
-  return mockedData.movies;
+  if (searchValue !== '') {
+    movies = movies.filter(el => {
+      return el.title.toLowerCase().indexOf(searchValue.toLowerCase()) >= 0;
+    });
+  }
+
+  return movies;
 }
