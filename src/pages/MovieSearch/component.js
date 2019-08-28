@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import MoviesList from './../../components/MoviesList';
-import MovieSearchForm from './../../components/MovieSearchForm';
-import { SubHeader, Toggle } from './../../shared';
+import MoviesList from 'components/MoviesList';
+import MovieSearchForm from 'components/MovieSearchForm';
+import { SubHeader, Toggle } from 'shared';
 
 import { getMovies } from './utils.js';
 

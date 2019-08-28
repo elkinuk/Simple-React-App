@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { LinkButton } from './../../shared';
+import { LinkButton } from 'shared';
 
-import styles from './style.module.scss';
+import styles from './style.scss';
 
 const MoviesListItem = props => {
   const { title, description, year, genre, id, picLink } = props;
@@ -15,7 +15,7 @@ const MoviesListItem = props => {
         <span className={styles.year}> {year} </span>
       </div>
       <div className={styles.body}>
-        <img className={styles.img} src={picLink} height="400" alt={title}/>
+        <img className={styles.img} src={picLink} height="400" alt={title} />
         <span className={styles.genre}> {genre} </span>
         <p className={styles.description}>{description}</p>
         <LinkButton to={`/${id}`}>See more</LinkButton>
@@ -23,7 +23,6 @@ const MoviesListItem = props => {
     </div>
   );
 };
-
 
 MoviesListItem.propTypes = {
   title: PropTypes.string.isRequired,

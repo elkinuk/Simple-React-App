@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { LinkButton } from './../../shared';
+import { LinkButton } from 'shared';
 
-import styles from './style.module.scss';
+import styles from './style.scss';
 
 const MovieCard = props => {
   const { title, description, year, genre, picLink, rating, duration } = props;

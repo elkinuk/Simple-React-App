@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './style.module.scss';
+import styles from './style.scss';
 
 class ErrorBoundary extends Component {
   state = {

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Toggle } from './../../shared';
+import { Toggle } from 'shared';
 
-import styles from './style.module.scss';
+import styles from './style.scss';
 
 class MovieSearchForm extends Component {
   state = {

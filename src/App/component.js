@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import { Header, Footer } from './../shared';
-import MovieSearch from './../pages/MovieSearch';
-import MovieDetails from './../pages/MovieDetails';
-import ErrorBoundary from './../components/ErrorBoundary';
+import { Header, Footer } from 'shared';
+import MovieSearch from 'pages/MovieSearch';
+import MovieDetails from 'pages/MovieDetails';
+import ErrorBoundary from 'components/ErrorBoundary';
 
-import styles from './style.module.scss';
+import styles from './style.scss';
 
 const App = () => {
   return (

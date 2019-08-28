@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import styles from './style.module.scss';
+import styles from './style.scss';
 
 const LinkButton = props => {
   const { to, children } = props;

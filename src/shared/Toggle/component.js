@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './style.module.scss';
+import styles from './style.scss';
 
 const Toggle = props => {
   const { labels, text, type, onChange, value } = props;

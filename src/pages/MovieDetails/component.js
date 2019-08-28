@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import MovieCard from './../../components/MovieCard';
-import MoviesList from './../../components/MoviesList';
-import { SubHeader } from './../../shared';
+import MovieCard from 'components/MovieCard';
+import MoviesList from 'components/MoviesList';
+import { SubHeader } from 'shared';
 
 import { getCurentMovie, getMoviesByGenre } from './utils.js';
 

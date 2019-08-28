@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import MovieItem from './../MoviesListItem';
 
-import styles from './style.module.scss';
+import styles from './style.scss';
 
 const MoviesList = props => {
   const createList = () => {
