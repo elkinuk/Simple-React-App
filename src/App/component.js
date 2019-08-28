@@ -8,7 +8,7 @@ import ErrorBoundary from './../components/ErrorBoundary';
 
 import styles from './style.module.scss';
 
-function App() {
+const App = () => {
   return (
     <>
       <Header />
@@ -25,6 +25,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;
