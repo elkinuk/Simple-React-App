@@ -37,7 +37,7 @@ class MovieDetails extends Component {
 
     return (
       <>
-        <MovieCard {...currentMovie} />
+        {currentMovie.title ? <MovieCard {...currentMovie} /> : null}
         <SubHeader>
           <span>Films by {currentMovie.genre} genre</span>
         </SubHeader>
