@@ -29,10 +29,11 @@
   }
 
   .body {
-    overflow: hidden;
+    //overflow: hidden;
   }
 
   .item {
+
     &_left + label {
       border-right: 0;
 
@@ -56,6 +57,8 @@
       & + label {
         cursor: pointer;
         min-width: 60px;
+        overflow: hidden;
+
 
         &:hover {
           background: none;

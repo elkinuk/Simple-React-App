@@ -7,8 +7,8 @@ const Toggle = props => {
   const { labels, text, type, onChange, value } = props;
   return (
     <div className={styles.toggle}>
-      <span className={styles.label}> {text} </span>
-      <div className={styles.body}>
+      <span className={styles.label} id={"groupLable-" + type}> {text} </span>
+      <div className={styles.body} role="radiogroup" aria-labelledby={"groupLable-" + type}>
         <input
           id={'toggle-' + labels[0]}
           className={styles.item_left}
@@ -18,7 +18,7 @@ const Toggle = props => {
           defaultChecked={labels[0] === value}
           onChange={onChange}
         />
-        <label htmlFor={'toggle-' + labels[0]} className={styles.btn}>
+        <label htmlFor={'toggle-' + labels[0]} className={styles.btn} tabindex="0" role="radio">
           {labels[0]}
         </label>
         <input
@@ -30,7 +30,7 @@ const Toggle = props => {
           defaultChecked={labels[0] !== value}
           onChange={onChange}
         />
-        <label htmlFor={'toggle-' + labels[1]} className={styles.btn}>
+        <label htmlFor={'toggle-' + labels[1]} className={styles.btn} tabindex="0" role="radio">
           {labels[1]}
         </label>
       </div>

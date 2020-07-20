@@ -18,7 +18,9 @@ const MoviesListItem = props => {
         <img className={styles.img} src={picLink} height="400" alt={title}/>
         <span className={styles.genre}> {genre} </span>
         <p className={styles.description}>{description}</p>
-        <LinkButton to={`/${id}`}>See more</LinkButton>
+        <LinkButton to={`/${id}`} a11y={`See more ${title} details`}>
+          See more
+        </LinkButton>
       </div>
     </div>
   );

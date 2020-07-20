@@ -5,7 +5,7 @@ import styles from './style.module.scss';
 const Header = () => {
   return (
     <header className={styles.header}>
-      <span className={styles.title}>Movie app</span>
+      <h1 className={styles.title}>Movie app</h1>
     </header>
   );
 };

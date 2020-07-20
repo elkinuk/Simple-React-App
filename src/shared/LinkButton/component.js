@@ -7,7 +7,7 @@ import styles from './style.module.scss';
 const LinkButton = props => {
   const { to, children } = props;
   return (
-    <Link to={to}>
+    <Link to={to} aria-label={props.a11y}>
       <span className={styles.link}>{children}</span>
     </Link>
   );

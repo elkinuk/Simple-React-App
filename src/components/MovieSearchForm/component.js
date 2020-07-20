@@ -26,7 +26,8 @@ class MovieSearchForm extends Component {
 
     return (
       <form className={styles.form} onSubmit={e => handleSubmit(e, searchValue, searchToggleValue)}>
-        <input type="text" name="search" placeholder="Search..." onChange={this.handleInput} />
+        <label htmlFor="searchMovie" className="hidden">Search movie</label>
+        <input id="searchMovie" type="text" name="search" placeholder="Search..." onChange={this.handleInput} />
         <Toggle
           labels={['title', 'genre']}
           type="search"

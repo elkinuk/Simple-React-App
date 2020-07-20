@@ -20,3 +20,23 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+:global{
+  .hidden {
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+    border: 0;
+    position: absolute;
+  }
+
+  label,
+  input,
+  button {
+    &:focus {
+      outline: 3px solid #fff;
+    }
+  }
+}
